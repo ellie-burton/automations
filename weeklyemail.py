@@ -33,7 +33,7 @@ def fetch_happy_reasons():
     else:
         # Convert the data to a DataFrame for easier manipulation
         df = pd.DataFrame(values[1:], columns=values[0])  # Skip the header row
-        df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')  # Adjust the format if necessary
+        df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')  # Adjust the format if necessary
 
         # Filter rows for the last 7 days
         one_week_ago = datetime.now() - timedelta(days=7)
@@ -125,7 +125,7 @@ def fetch_random_photos():
     for i, idx in enumerate(random_indices):
         URL = str(photos_df.baseUrl[idx])
         response = requests.get(URL)
-        image_path = f"image{i + 1}.png"
+        image_path = f"WeeklyPics/image{i + 1}.png"
         with open(image_path, "wb") as img_file:
             img_file.write(response.content)
         images.append(image_path)
@@ -150,9 +150,9 @@ def send_email(message, images):
     for i, image in enumerate(images):
         with open(image, 'rb') as img:
             mime_image = MIMEImage(img.read())
-            mime_image.add_header('Content-ID', f'<image{i+1}>')
+            mime_image.add_header('Content-ID', f'<WeeklyPics/image{i+1}>')
             msg.attach(mime_image)
-        html += f'<br><img src="cid:image{i+1}"><br>'
+        html += f'<br><img src="cid:WeeklyPics/image{i+1}"><br>'
     html += "</body></html>"
 
     # Attach parts into message container.

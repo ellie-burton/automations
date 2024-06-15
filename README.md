@@ -15,29 +15,28 @@ This automation process helps you log moments of gratitude and happiness through
 
 ### 1. Logging Happiness with iPhone Widget
 - **Widget Setup**: An iPhone widget named "I’m so happy!" is created using the Shortcuts app. This widget is always accessible on your home screen.
-![Widget](img/widget_screenshot.png)
-![Widget Setup](img/widget_setup_screenshot.png)
+![Widget](img/Widget.png)
+![Widget Setup](img/widget-setup.png)
 
 - **Shortcut Action**: When the widget is tapped, a shortcut runs asking, "Why are you so happy?" You provide a response, and the shortcut then triggers a Python script (`populate.py`) via Pyto (a Python IDE for iOS) to log this information.
 ![Shortcut Action](img/shortcut_action_screenshot.png)
-![Pyto](img/pyto.png)
+![Pyto](img/pyto.jpg)
 
 
 ### 2. Storing Data in Google Sheets
 - **Python Script (`populate.py`)**: This script authenticates with Google Sheets using OAuth2. It takes the user’s input from the shortcut, along with the current date, and appends this information to a pre-specified Google Sheet. This creates a running log of all your happy moments.
-![Google Sheet](img/google_sheet_screenshot.png)
+![Google Sheet](img/google-sheets.png)
 
 ### 3. Weekly Email Recap
 - **Python Script (`weeklyemail.py`)**: Another script scheduled to run weekly via Task Scheduler on your computer. This script performs two key tasks:
   - **Fetch Happy Reasons**: It reads the Google Sheet to fetch all the happy reasons logged in the past week.
   - **Fetch Random Photos**: It connects to your Google Photos account and selects five random photos from the past week.
   - **Send Email**: Combines the happy reasons and photos into an email and sends it to your designated email address.
-![Weekly Email](img/weekly_email_screenshot.png)
+![Weekly Email](img/email.png)
 
 ### 4. Automating the Weekly Email with Task Scheduler
 - **Task Scheduler Setup**: You configure Task Scheduler on your computer to run the `weeklyemail.py` script at a specified time each week (e.g., every Sunday at 8 PM).
 - **Email Delivery**: Once the script runs, it generates an email summarizing your happy moments from the past week along with five random photos, providing a delightful recap to start your week positively.
-![Task Scheduler]img/task_scheduler_screenshot.png)
 
 ## Benefits
 - **Mindfulness**: Regularly logging moments of happiness helps cultivate mindfulness and gratitude.
