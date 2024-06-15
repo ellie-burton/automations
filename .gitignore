@@ -1,0 +1,12 @@
+# Ignore authentication files
+client-secret.json
+token.json
+
+# Ignore the WeeklyPics folder
+WeeklyPics/
+
+# Other entries can be here as well
+*.log
+*.tmp
+__pycache__/
+.env
