@@ -15,24 +15,25 @@ This automation process helps you log moments of gratitude and happiness through
 
 ### 1. Logging Happiness with iPhone Widget
 - **Widget Setup**: An iPhone widget named "I’m so happy!" is created using the Shortcuts app. This widget is always accessible on your home screen.
-![Widget](img/Widget.png)
-![Widget Setup](img/widget-setup.png)
+<img src="img/Widget.png" width="300">
+<img src="img/Widget-setup.png" width="300">
 
 - **Shortcut Action**: When the widget is tapped, a shortcut runs asking, "Why are you so happy?" You provide a response, and the shortcut then triggers a Python script (`populate.py`) via Pyto (a Python IDE for iOS) to log this information.
-![Shortcut Action](img/shortcut_action_screenshot.png)
-![Pyto](img/pyto.jpg)
+<img src="img/shortcut-action.png" width="300">
+<img src="img/pyto.jpg" width="300">
 
 
 ### 2. Storing Data in Google Sheets
 - **Python Script (`populate.py`)**: This script authenticates with Google Sheets using OAuth2. It takes the user’s input from the shortcut, along with the current date, and appends this information to a pre-specified Google Sheet. This creates a running log of all your happy moments.
-![Google Sheet](img/google-sheets.png)
+<img src="img/google-sheets.png" width="300">
 
 ### 3. Weekly Email Recap
 - **Python Script (`weeklyemail.py`)**: Another script scheduled to run weekly via Task Scheduler on your computer. This script performs two key tasks:
   - **Fetch Happy Reasons**: It reads the Google Sheet to fetch all the happy reasons logged in the past week.
   - **Fetch Random Photos**: It connects to your Google Photos account and selects five random photos from the past week.
   - **Send Email**: Combines the happy reasons and photos into an email and sends it to your designated email address.
-![Weekly Email](img/email.png)
+<img src="img/email.png" width="300">
+
 
 ### 4. Automating the Weekly Email with Task Scheduler
 - **Task Scheduler Setup**: You configure Task Scheduler on your computer to run the `weeklyemail.py` script at a specified time each week (e.g., every Sunday at 8 PM).
