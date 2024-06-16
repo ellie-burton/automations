@@ -16,14 +16,11 @@ This automation process helps you log moments of gratitude and happiness through
 ### 1. Logging Happiness with iPhone Widget
 - **Widget Setup**: An iPhone widget named "I’m so happy!" is created using the Shortcuts app. This widget is always accessible on your home screen.
 
-<p float="left">
-<img src="img/Widget.png" width="150">
-<img src="img/widget-setup.png" width="200">
-</p>
-
 - **Shortcut Action**: When the widget is tapped, a shortcut runs asking, "Why are you so happy?" You provide a response, and the shortcut then triggers a Python script (`populate.py`) via Pyto (a Python IDE for iOS) to log this information.
 
 <p float="left">
+<img src="img/Widget.png" width="150">
+<img src="img/widget-setup.png" width="200">
 <img src="img/shortcut-action.PNG" width="200">
 <img src="img/pyto.jpg" width="150">
 </p>
@@ -44,8 +41,8 @@ This automation process helps you log moments of gratitude and happiness through
 - **Task Scheduler Setup**: You can configure Task Scheduler on Windows to run the `weeklyemail.py` script at a specified time each week (e.g., every Sunday at 9 AM).
 - **Email Delivery**: Once the script runs, your happy moments from the past week and five random photos are sent to your inbox, providing a delightful recap to start your week off positively.
 <p float="left">
-<img src="img/trigger.png" width="200">
-<img src="img/action.png" width="150">
+<img src="img/trigger.png" width="300">
+<img src="img/action.png" width="300">
 </p>
 
 ## Benefits
