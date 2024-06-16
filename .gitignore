@@ -1,6 +1,7 @@
 # Ignore authentication files
-client-secret.json
-token.json
+gphotos.json
+gsheets.json
+token.pickle
 
 # Ignore the WeeklyPics folder
 WeeklyPics/
@@ -10,3 +11,4 @@ WeeklyPics/
 *.tmp
 __pycache__/
 .env
+
