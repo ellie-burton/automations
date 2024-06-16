@@ -41,8 +41,12 @@ This automation process helps you log moments of gratitude and happiness through
 
 
 ### 4. Automating the Weekly Email with Task Scheduler
-- **Task Scheduler Setup**: You configure Task Scheduler on your computer to run the `weeklyemail.py` script at a specified time each week (e.g., every Sunday at 8 PM).
-- **Email Delivery**: Once the script runs, it generates an email summarizing your happy moments from the past week along with five random photos, providing a delightful recap to start your week positively.
+- **Task Scheduler Setup**: You can configure Task Scheduler on Windows to run the `weeklyemail.py` script at a specified time each week (e.g., every Sunday at 9 AM).
+- **Email Delivery**: Once the script runs, your happy moments from the past week and five random photos are sent to your inbox, providing a delightful recap to start your week off positively.
+<p float="left">
+<img src="img/trigger.png" width="200">
+<img src="img/action.png" width="150">
+</p>
 
 ## Benefits
 - **Mindfulness**: Regularly logging moments of happiness helps cultivate mindfulness and gratitude.
